@@ -114,7 +114,7 @@ function App() {
       </div>
       <div>
         <p className="EmailText">What is your ethnicity/race</p>
-        <button className="EthnicityButton"></button>
+        <div><button className="EthnicityButton"></button></div>
         </div>
       </>
   );

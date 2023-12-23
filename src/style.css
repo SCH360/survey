@@ -81,8 +81,9 @@
 }
 .EthnicityButton{
     border-radius:100px;
-    border:2px white;;
-    background-color: blue;
+    border-color: blue;
+    background-color: white;
+    color:black;
     width:15px;
     height:15px;
     margin-left:10%;
