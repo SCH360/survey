@@ -15,6 +15,7 @@ function App() {
   };
   const buttonClick3 = ()=>{setisGenderBox4(!isGenderBox4);
   };
+  const buttonClick4 = ()=>{}
   const states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
   'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
   'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan',
@@ -43,7 +44,7 @@ function App() {
         <p className="Description">Hello, welcome to this survey. Please fill out the questions below.</p>
         <p className="FirstNameText">First Name</p>
       </div>
-      <div className="FirstName"><TextInput style={{outlineStyle: 'none'}}placeholder = " Type Here..."/></div>
+      <div className="FirstName"><input className = "BiggerText" type="Text" placeholder = " Type Here..."/></div>
       <p className="LastNameText">Last Name</p>
       <div className="LastName"><TextInput style={{outlineStyle: 'none'}}placeholder=" Type Here..."/></div>
       <p className="EmailText">Email Address</p>
@@ -114,7 +115,24 @@ function App() {
       </div>
       <div>
         <p className="EmailText">What is your ethnicity/race</p>
-        <div><button className="EthnicityButton"></button></div>
+      </div>
+        <div>
+          <button className="EthnicityButton"></button>
+        </div>
+        <div>
+          <button className="EthnicityButton2"></button>
+        </div>
+        <div>
+          <button className="EthnicityButton3"></button>
+        </div>
+        <div>
+          <button className="EthnicityButton4"></button>
+        </div>
+        <div>
+          <button className="EthnicityButton5"></button>
+        </div>
+        <div>
+          <button className="EthnicityButton6"></button>
         </div>
       </>
   );

@@ -10,55 +10,66 @@
 .FirstName{
     margin-left:10%;
     margin-top:.5%;
-    border:2px solid black;
-    border-color:black;
-    height: 25px;
-    width:150px;
+    border:3px solid;
+    border-color:#454545;
+    height: 30px;
+    width:160px;
     margin: 12;
-    border-radius: 1;
+    border-radius: 5px;
     padding: 10;
     
 }
+.BiggerText{
+    font-size:17px;
+    border:;
+    width:160px;
+    font-family:Poppins;
+}
 .FirstNameText{
     margin-left:10%;
-    margin-top:4%;
+    font-size:17px;
+    margin-top:3%;
+    color:black;
     font-family: 'Poppins', sans-serif;
 }
 .LastNameText{
     margin-left:10%;
     margin-top:2.5%;
     font-family: 'Poppins', sans-serif;
+    font-size:17px;
 }
 .LastName{
     margin-left:10%;
     margin-top:.5%;
-    border:2px solid black;
-    border-color:black;
-    height: 25px;
+    border:3px solid;
+    border-color:#454545;
+    height: 30px;
     width:150px;
     margin: 12;
-    border-radius: 1;
+    border-radius: 5px;
     padding: 10;
 }
 .EmailText{
     margin-left:10%;
     margin-top:2.5%;
     font-family: 'Poppins', sans-serif;
+    font-size:17px;
 }
 .Email{
     margin-left:10%;
     margin-top:.5%;
-    border:2px solid black;
-    border-color:black;
-    height: 25px;
+    border:3px solid;
+    border-color:#454545;
+    height: 30px;
     width:215px;
     margin: 12;
-    border-radius: 1;
+    border-radius: 5px;
     padding: 10;
 }
 .GenderText{
     margin-top:2.5%;
     margin-left:10%;
+    font-size:17px;
     font-family: 'Poppins', sans-serif;
 
 }
@@ -74,6 +85,7 @@
     border-width:10px;
     border:5px solid rgb(208, 204, 204);
     background:white;
+    border-radius:5px;
     color:black;
     flex-direction:column;
     flex: 1;
@@ -81,11 +93,66 @@
 }
 .EthnicityButton{
     border-radius:100px;
-    border-color: blue;
+    border-color: black;
     background-color: white;
     color:black;
-    width:15px;
-    height:15px;
+    width:20px;
+    height:20px;
+    margin-left:10%;
+
+}
+.EthnicityButton2{
+    border-radius:100px;
+    border-color: black;
+    background-color: white;
+    color:black;
+    width:20px;
+    height:20px;
+    margin-top:.5%;
+    margin-left:10%;
+
+}
+.EthnicityButton3{
+    border-radius:100px;
+    border-color: black;
+    background-color: white;
+    color:black;
+    width:20px;
+    height:20px;
+    margin-top:.5%;
+    margin-left:10%;
+
+}
+.EthnicityButton4{
+    border-radius:100px;
+    border-color: black;
+    background-color: white;
+    color:black;
+    width:20px;
+    height:20px;
+    margin-top:.5%;
+    margin-left:10%;
+
+}
+.EthnicityButton5{
+    border-radius:100px;
+    border-color: black;
+    background-color: white;
+    color:black;
+    width:20px;
+    height:20px;
+    margin-top:.5%;
+    margin-left:10%;
+
+}
+.EthnicityButton6{
+    border-radius:100px;
+    border-color: black;
+    background-color: white;
+    color:black;
+    width:20px;
+    height:20px;
+    margin-top:.5%;
     margin-left:10%;
 
 }
@@ -99,6 +166,7 @@
     height:40px;
     border-width:10px;
     border:5px solid blue;
+    border-radius:5px;
     background:white;
     color:black;
     flex-direction:column;
@@ -117,7 +185,7 @@
     margin-top:2%;
     margin-left:10%;
     font-family: 'Poppins', sans-serif;
-    font-size:11px;
+    font-size:12px;
 
 }
 .DateofBirthButton{
@@ -125,7 +193,10 @@
 } 
 .SelectText{
     font-family: 'Poppins', sans-serif;
-    border:2px solid black;
+    border:3px solid #454545;
+    border-radius:5px;
+    height:30px;
+    font-size:15px;
 }
 .StateDropdownBox{
     font-family: 'Poppins', sans-serif;
