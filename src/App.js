@@ -38,15 +38,23 @@ function App() {
   const HandleStateChange = (e) => {setSelectedState(e.target.value)};
 
   return (
-    <><div>
-      <img className = "WelcomeImage" src={WelcomeImage} alt='Welcome'/>
-    </div><div>
+    
+    <>
+    <div><img className = "WelcomeImage" src={WelcomeImage} alt='Welcome'/></div>
+
+    <div>
         <p className="Description">Hello, welcome to this survey. Please fill out the questions below.</p>
         <p className="FirstNameText">First Name</p>
-      </div>
-      <div className="FirstName"><input className = "BiggerText" type="Text" placeholder = " Type Here..."/></div>
+    </div>
+
+      <div className="FirstName">
+      <input className = "BiggerText" type="text" placeholder = " Type Here..."/>
+        </div>
+      
       <p className="LastNameText">Last Name</p>
-      <div className="LastName"><TextInput style={{outlineStyle: 'none'}}placeholder=" Type Here..."/></div>
+      <div className="LastName">
+      <input className = "BiggerText" type="text" placeholder = " Type Here..."/>
+      </div>
       <p className="EmailText">Email Address</p>
       <div className = "Email"><TextInput style={{outlineStyle: 'none'}}placeholder=" Type Here..."/></div>
       <div className="GenderText">

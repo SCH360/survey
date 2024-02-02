@@ -11,6 +11,7 @@
     margin-left:10%;
     margin-top:.5%;
     border:3px solid;
+    /* border:none; */
     border-color:#454545;
     height: 30px;
     width:160px;
@@ -19,12 +20,40 @@
     padding: 10;
     
 }
+
+
+
 .BiggerText{
     font-size:17px;
-    border:;
-    width:160px;
+    border:0px solid transparent;
+    /* border-color:#000; */
+    border-radius: 5px;
+    width:140px;
     font-family:Poppins;
+    outline:none
 }
+.BiggerText:focus{
+    border:none;
+    
+}
+.input-style {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    outline: none;
+  }
+  
+  .input-style:focus {
+    border: none;
+  }
+
+
+
+
+
+
 .FirstNameText{
     margin-left:10%;
     font-size:17px;
