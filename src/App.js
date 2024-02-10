@@ -36,7 +36,15 @@ function App() {
   const HandleMonthChange = (event) => {SetMonth(event.target.value)};
   const HandleYearChange = (event) => {SetYear(event.target.value)};
   const HandleStateChange = (e) => {setSelectedState(e.target.value)};
-
+  const questions = [
+    {
+      question:"What is your ethnicity/race?",
+      options:["American Indian or Alaskan Native", "Asian/Pacific Islander", "Black or African American", "Hispanic", "White/Caucasian","Other"]
+    }
+  ];
+const[CurrentQuestion, setCurrentQuestion] = useState(0);
+const [answers, setAnswers] = useState([]);
+const HandleAnswer = (answer) => {};
   return (
     
     <>
@@ -56,7 +64,9 @@ function App() {
       <input className = "BiggerText" type="text" placeholder = " Type Here..."/>
       </div>
       <p className="EmailText">Email Address</p>
-      <div className = "Email"><TextInput style={{outlineStyle: 'none'}}placeholder=" Type Here..."/></div>
+      <div className="Email">
+      <input className = "BiggerText" type="text" placeholder = " Type Here..."/>
+      </div>
       <div className="GenderText">
         <label>What is your gender?</label>
         <option value = "">Select <strong>one</strong></option>
@@ -93,10 +103,13 @@ function App() {
       
 </div>
 <div><p className="EmailText">What is your Address? (Optional)</p>
-      <div className = "Email"><TextInput style={{outlineStyle: 'none'}}placeholder=" Type Here..."/></div>
+      <div className= "Email">
+      <input className = "BiggerText" type="text" placeholder=" Type Here..."/></div>
       </div>
-      <div><p className="EmailText">City</p></div>
-      <div className = "Email"><TextInput style={{outlineStyle: 'none'}}placeholder=" Type Here..."/></div>
+      <div><p className="EmailText">City</p>
+      <div className ="Email">
+      <input className = "BiggerText" type="text" placeholder=" Type Here..."/></div>
+      </div>
       <div><p className="StateText">State</p></div>
 
       <div className="StateDropdownElement">
@@ -108,8 +121,10 @@ function App() {
           ))}
         </select>
       </div>
-      <div><p className="ZipcodeText">Zipcode</p></div>
-      <div className = "Email"><TextInput style={{outlineStyle: 'none'}}placeholder=" Type Here..."/></div>
+      <div><p className="ZipcodeText">Zipcode</p>
+      <div className = "Email">
+      <input className = "BiggerText" type="text" placeholder=" Type Here..."/></div>
+      </div>
 
       <div>
         <div className="GenderText">
@@ -121,27 +136,28 @@ function App() {
         <div className={isGenderBox3 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick2}>Married</button></div></View>
         <div className={isGenderBox4 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick3}>In Relationship</button></div>
       </div>
-      <div>
-        <p className="EmailText">What is your ethnicity/race</p>
-      </div>
-        <div>
-          <button className="EthnicityButton"></button>
-        </div>
-        <div>
-          <button className="EthnicityButton2"></button>
-        </div>
-        <div>
-          <button className="EthnicityButton3"></button>
-        </div>
-        <div>
-          <button className="EthnicityButton4"></button>
-        </div>
-        <div>
-          <button className="EthnicityButton5"></button>
-        </div>
-        <div>
-          <button className="EthnicityButton6"></button>
-        </div>
+<div className = "First" >
+  <div className = "QuestionContainer">
+    <h3>
+      {questions[CurrentQuestion].question}
+      <ul className = "OptionsList">
+        {questions[CurrentQuestion].options.map((option,index)=>(
+          <li key = {index} >
+            <label>
+              <input
+              type = "radio"
+              name = "answer"
+              value = {option}
+              onClick = {()=>HandleAnswer(option)}
+              />
+              {option}
+            </label>
+          </li>
+        ))}
+      </ul>
+    </h3>
+  </div>
+</div>
       </>
   );
 }
