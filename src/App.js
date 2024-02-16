@@ -42,6 +42,24 @@ function App() {
       options:["American Indian or Alaskan Native", "Asian/Pacific Islander", "Black or African American", "Hispanic", "White/Caucasian","Other"]
     }
   ];
+const ReligionQuestions = [
+  {
+    ReligionQuestion:"Would you consider yourself religious?",
+    options:["Christian", "Roman Catholic", "Mormon", "Orthodox", "Jewish", "Muslim", "Buddhist", "Hindu", "Atheist", "Agnostic", "None of the above"]
+  }
+];
+const EnjoyQuestions = [
+  {
+    EnjoyQuestion:"I enjoyed this survey:",
+    options:["Yes", "No"]
+  }
+];
+const ReferQuestions = [
+  {
+    ReferQuestion:"How did you hear about this website?",
+    options:["Social Media", "Outdoor Advertising", "Website", "Word-of-Mouth", "Family and Friends"]
+  }
+];
 const[CurrentQuestion, setCurrentQuestion] = useState(0);
 const [answers, setAnswers] = useState([]);
 const HandleAnswer = (answer) => {};
@@ -158,6 +176,72 @@ const HandleAnswer = (answer) => {};
     </h3>
   </div>
 </div>
+<div className = "First" >
+  <div className = "QuestionContainer">
+    <h3>
+      {ReligionQuestions[CurrentQuestion].ReligionQuestion}
+      <ul className = "OptionsList">
+        {ReligionQuestions[CurrentQuestion].options.map((option,index)=>(
+          <li key = {index} >
+            <label>
+              <input
+              type = "radio"
+              name = "answer"
+              value = {option}
+              onClick = {()=>HandleAnswer(option)}
+              />
+              {option}
+            </label>
+          </li>
+        ))}
+      </ul>
+    </h3>
+  </div>
+</div>
+<div className = "First" >
+  <div className = "QuestionContainer">
+    <h3>
+      {EnjoyQuestions[CurrentQuestion].EnjoyQuestion}
+      <ul className = "OptionsList">
+        {EnjoyQuestions[CurrentQuestion].options.map((option,index)=>(
+          <li key = {index} >
+            <label>
+              <input
+              type = "radio"
+              name = "answer"
+              value = {option}
+              onClick = {()=>HandleAnswer(option)}
+              />
+              {option}
+            </label>
+          </li>
+        ))}
+      </ul>
+    </h3>
+  </div>
+</div>
+<div className = "First" >
+  <div className = "QuestionContainer">
+    <h3>
+      {ReferQuestions[CurrentQuestion].ReferQuestion}
+      <ul className = "OptionsList">
+        {ReferQuestions[CurrentQuestion].options.map((option,index)=>(
+          <li key = {index} >
+            <label>
+              <input
+              type = "radio"
+              name = "answer"
+              value = {option}
+              onClick = {()=>HandleAnswer(option)}
+              />
+              {option}
+            </label>
+          </li>
+        ))}
+      </ul>
+    </h3>
+  </div>
+  </div>
       </>
   );
 }
