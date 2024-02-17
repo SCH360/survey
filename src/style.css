@@ -1,3 +1,4 @@
+/* This is the welcome text */
 .Text{
     margin-top:3%;
     text-align:center;
@@ -7,6 +8,7 @@
 .Description{
     margin-left:10%;
 }
+/* This is the first name textbox */
 .FirstName{
     margin-left:10%;
     margin-top:.5%;
@@ -53,7 +55,7 @@
 
 
 
-
+/* This is the first name question text */
 .FirstNameText{
     margin-left:10%;
     font-size:17px;
@@ -61,12 +63,14 @@
     color:black;
     font-family: 'Poppins', sans-serif;
 }
+/* This is the last name question text */
 .LastNameText{
     margin-left:10%;
     margin-top:2.5%;
     font-family: 'Poppins', sans-serif;
     font-size:17px;
 }
+/* This is the last name textbox */
 .LastName{
     margin-left:10%;
     margin-top:.5%;
@@ -78,12 +82,14 @@
     border-radius: 5px;
     padding: 10;
 }
+/* This is the Email Question Text */
 .EmailText{
     margin-left:10%;
     margin-top:2.5%;
     font-family: 'Poppins', sans-serif;
     font-size:17px;
 }
+/* This is the email textbox */
 .Email{
     margin-left:10%;
     margin-top:.5%;
@@ -95,6 +101,7 @@
     border-radius: 5px;
     padding: 10;
 }
+/* This is the Gender Question Text */
 .GenderText{
     margin-top:2.5%;
     margin-left:10%;
@@ -102,7 +109,7 @@
     font-family: 'Poppins', sans-serif;
 
 }
-
+/* This is the Gender Question buttons */
 .GenderBox{
     display:inline-block;
     margin-top:1%;
@@ -120,71 +127,7 @@
     flex: 1;
     padding:20;
 }
-.EthnicityButton{
-    border-radius:100px;
-    border-color: black;
-    background-color: white;
-    color:black;
-    width:20px;
-    height:20px;
-    margin-left:10%;
-
-}
-.EthnicityButton2{
-    border-radius:100px;
-    border-color: black;
-    background-color: white;
-    color:black;
-    width:20px;
-    height:20px;
-    margin-top:.5%;
-    margin-left:10%;
-
-}
-.EthnicityButton3{
-    border-radius:100px;
-    border-color: black;
-    background-color: white;
-    color:black;
-    width:20px;
-    height:20px;
-    margin-top:.5%;
-    margin-left:10%;
-
-}
-.EthnicityButton4{
-    border-radius:100px;
-    border-color: black;
-    background-color: white;
-    color:black;
-    width:20px;
-    height:20px;
-    margin-top:.5%;
-    margin-left:10%;
-
-}
-.EthnicityButton5{
-    border-radius:100px;
-    border-color: black;
-    background-color: white;
-    color:black;
-    width:20px;
-    height:20px;
-    margin-top:.5%;
-    margin-left:10%;
-
-}
-.EthnicityButton6{
-    border-radius:100px;
-    border-color: black;
-    background-color: white;
-    color:black;
-    width:20px;
-    height:20px;
-    margin-top:.5%;
-    margin-left:10%;
-
-}
+/* This is the Gender Box when clicked on */
 .GenderBox2{
     display:inline-block;
     margin-top:1%;
@@ -210,6 +153,7 @@
     font-family: 'Poppins', sans-serif;
     
 }
+/* This is the Date of Birth Question Text */
 .DateofBirthText{
     margin-top:2%;
     margin-left:10%;
@@ -217,9 +161,11 @@
     font-size:12px;
 
 }
+/* This is the date of birth button */
 .DateofBirthButton{
     font-family: 'Poppins', sans-serif;
 } 
+/* This is the Select Text inside of the Select State Dropdown Box */
 .SelectText{
     font-family: 'Poppins', sans-serif;
     border:3px solid #454545;
@@ -227,6 +173,7 @@
     height:30px;
     font-size:15px;
 }
+/* This is the styling for the State dropdown box */
 .StateDropdownBox{
     font-family: 'Poppins', sans-serif;
     border:3px solid black;
@@ -236,16 +183,19 @@
     font-size:15px;
     margin-left:10%;
 }
+/* This is the Select State Question Text */
 .StateText{
     font-family: 'Poppins', sans-serif;
     margin-top:2%;
     margin-left:10%;
 }
+/* This is the Zipcode Question Text */
 .ZipcodeText{
     font-family: 'Poppins', sans-serif;
     margin-top:2%;
     margin-left:10%;
 }
+/* This is the Married Buttons */
 .isMarried{
     display:inline-block;
     margin-top:1%;
@@ -278,7 +228,7 @@
     flex: 1;
     padding:20;
 }
-
+/* This is the welcome image */
 .WelcomeImage{
     width:500px;
     height:160px;
@@ -305,3 +255,52 @@
 .OptionsList li{
 
 }
+.Submit{
+    display: flex;
+        height: 100vh;
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto 0px;
+    }
+    .rounded-square {
+        position: absolute;
+        width: 150px;
+        height: 40px;
+        margin-top:50px;
+        margin-left:153px;
+        background-color: #073763;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 17px;
+        font-family: 'Poppins', 'sans-serif';
+        border: 3.2px solid #073763;
+        z-index: 1;
+    }
+    @keyframes colorcycle {
+        0% {
+            color: #073763
+        };
+        25% {
+            color: rgb(46, 42, 42)
+        };
+        50% {
+            color: rgb(231, 33, 33)
+        };
+        75% {
+            color: rgb(36, 39, 234)
+        };
+        100% {
+            color: rgb(78, 193, 33)
+        };
+    }
+
+
+    .rounded-square:hover {
+        color: #073763;
+        background-color: white;
+        animation: colorcycle 1s;
+        transition: background 1s;
+    }

@@ -66,30 +66,36 @@ const HandleAnswer = (answer) => {};
   return (
     
     <>
+    {/* This is the welcome image */}
     <div><img className = "WelcomeImage" src={WelcomeImage} alt='Welcome'/></div>
 
     <div>
+      {/* This is the welcome/description text */}
         <p className="Description">Hello, welcome to this survey. Please fill out the questions below.</p>
+        {/* This is the First Name Question */}
         <p className="FirstNameText">First Name</p>
     </div>
 
       <div className="FirstName">
       <input className = "BiggerText" type="text" placeholder = " Type Here..."/>
         </div>
-      
+      {/* This is the Last Name Question */}
       <p className="LastNameText">Last Name</p>
       <div className="LastName">
       <input className = "BiggerText" type="text" placeholder = " Type Here..."/>
       </div>
+      {/* This is the Email Address Question */}
       <p className="EmailText">Email Address</p>
       <div className="Email">
       <input className = "BiggerText" type="text" placeholder = " Type Here..."/>
       </div>
+      {/* This is the gender question */}
       <div className="GenderText">
         <label>What is your gender?</label>
         <option value = "">Select <strong>one</strong></option>
 
       </div>
+      {/* These are the gender buttons */}
       <View>
         <div className={isGenderBox2 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick}>Male</button></div></View>
         
@@ -97,10 +103,11 @@ const HandleAnswer = (answer) => {};
       <div className={isGenderBox3 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick2}>Female</button></div></View>
       
       
-      
+      {/* This is the Date of Birth Question */}
       <div className ="DateofBirthText">
         <h2>What is your Date of Birth?</h2>
         <div className = "DateofBirthButton">
+          {/* This is the Date of Birth Buttons */}
           <select className = "SelectText" value = {month}onChange = {HandleMonthChange}>
             <option value="">Month</option>
             {months.map((m)=>(<option key = {m}value = {m}>{m}</option>))}
@@ -116,10 +123,12 @@ const HandleAnswer = (answer) => {};
             {years.map((y)=>(<option key = {y}value = {y}>{y}</option>))}
           </select>
       </div>
+      {/* This is the Date of Birth Text (You are -- years old) */}
       <h2>You are {value===currentYear ? "--":currentYear-year} years old</h2>
       
       
 </div>
+{/* This is the Address Question */}
 <div><p className="EmailText">What is your Address? (Optional)</p>
       <div className= "Email">
       <input className = "BiggerText" type="text" placeholder=" Type Here..."/></div>
@@ -128,8 +137,9 @@ const HandleAnswer = (answer) => {};
       <div className ="Email">
       <input className = "BiggerText" type="text" placeholder=" Type Here..."/></div>
       </div>
+      {/* This is the State Question */}
       <div><p className="StateText">State</p></div>
-
+      {/* These are the state options */}
       <div className="StateDropdownElement">
         <label htmlFor = "State Dropdown"></label>
         <select className = "StateDropdownBox" id = "State Dropdown" value = {SelectedState} onChange = {HandleStateChange}>
@@ -139,6 +149,7 @@ const HandleAnswer = (answer) => {};
           ))}
         </select>
       </div>
+      {/* This is the zipcode question */}
       <div><p className="ZipcodeText">Zipcode</p>
       <div className = "Email">
       <input className = "BiggerText" type="text" placeholder=" Type Here..."/></div>
@@ -146,6 +157,7 @@ const HandleAnswer = (answer) => {};
 
       <div>
         <div className="GenderText">
+        {/* This is the relationship question */}
         <label>Are you...?</label>
         <option value = "">Select <strong>one</strong></option></div>
         <View>
@@ -154,6 +166,7 @@ const HandleAnswer = (answer) => {};
         <div className={isGenderBox3 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick2}>Married</button></div></View>
         <div className={isGenderBox4 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick3}>In Relationship</button></div>
       </div>
+      {/* This is the Race Question */}
 <div className = "First" >
   <div className = "QuestionContainer">
     <h3>
@@ -176,6 +189,7 @@ const HandleAnswer = (answer) => {};
     </h3>
   </div>
 </div>
+{/* This is the Religion Question */}
 <div className = "First" >
   <div className = "QuestionContainer">
     <h3>
@@ -198,6 +212,7 @@ const HandleAnswer = (answer) => {};
     </h3>
   </div>
 </div>
+{/* This the "Did You Enjoy this Survey" Question */}
 <div className = "First" >
   <div className = "QuestionContainer">
     <h3>
@@ -220,6 +235,7 @@ const HandleAnswer = (answer) => {};
     </h3>
   </div>
 </div>
+{/* This is the refer question */}
 <div className = "First" >
   <div className = "QuestionContainer">
     <h3>
@@ -242,6 +258,12 @@ const HandleAnswer = (answer) => {};
     </h3>
   </div>
   </div>
+  {/* This is the submit button */}
+        <div className="Submit">
+            <a href="http://google.com">
+                <div className="rounded-square">Submit</div>
+            </a>
+        </div>
       </>
   );
 }
