@@ -44,14 +44,14 @@ function App() {
   ];
 const ReligionQuestions = [
   {
-    ReligionQuestion:"Would you consider yourself religious?",
+    ReligionQuestion:"What religion do you identify with?",
     options:["Christian", "Roman Catholic", "Mormon", "Orthodox", "Jewish", "Muslim", "Buddhist", "Hindu", "Atheist", "Agnostic", "None of the above"]
   }
 ];
 const EnjoyQuestions = [
   {
     EnjoyQuestion:"I enjoyed this survey:",
-    options:["Yes", "No"]
+    options:["Strongly Agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly Disagree"]
   }
 ];
 const ReferQuestions = [
