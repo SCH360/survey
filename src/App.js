@@ -15,10 +15,12 @@ function App() {
   const[Email, SetEmail] = useState("");
   const[Gender, SetGender] = useState("");
   const apiEndPoint = "http://0.0.0.0:5000/api";
-  const[isGenderBox2,setisGenderBox2] = useState(false);
-  const[isGenderBox3,setisGenderBox3] = useState(false);
-  const[isGenderBox4,setisGenderBox4] = useState(false);
+  const[isGenderBox2,setisGenderBox2] = useState(true);
+  const[isGenderBox3,setisGenderBox3] = useState(true);
+  const[isGenderBox4,setisGenderBox4] = useState(true);
   const[isMarried2, setisMarried2] = useState(false);
+  const[isMarried3, setisMarried3] = useState(false);
+  const[isMarried4, setisMarried4] = useState(false);
   const buttonClick = ()=>{setisGenderBox2(!isGenderBox2);
   };
   const buttonClick2 = ()=>{setisGenderBox3(!isGenderBox3);
@@ -101,6 +103,9 @@ const HandleSurvey = async() => {
       <div className="Email">
       <input className = "BiggerText" type="text" placeholder = " Type Here..." value = {Email} onChange = {(e) => SetEmail(e.target.value)}/>
       </div>
+
+
+
       {/* This is the gender question */}
       <div className="GenderText">
         <label>What is your gender?</label>
@@ -109,12 +114,27 @@ const HandleSurvey = async() => {
       </div>
       {/* These are the gender buttons */}
       <View>
-        <div className={isGenderBox2 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {()=>SetGender("Male")}>Male</button></div></View>
+         <div className ={Gender === "Male" ? "GenderBox2":"GenderBox"}>
+          <button className='GenderButtonStyle' onClick={()=>SetGender("Male")}>
+            Male
+          </button>
+         </div>
+
+        </View>
         
       <View>
-      <div className={isGenderBox3 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {()=>SetGender("Female")}>Female</button></div></View>
+      <div className ={Gender === "Female" ? "GenderBox2":"GenderBox"}>
+          <button className='GenderButtonStyle' onClick={()=>SetGender("Female")}>
+            Female
+          </button>
+         </div>
+        </View>
       
       
+
+
+
+
       {/* This is the Date of Birth Question */}
       <div className ="DateofBirthText">
         <h2>What is your Date of Birth?</h2>
@@ -167,17 +187,49 @@ const HandleSurvey = async() => {
       <input className = "BiggerText" type="text" placeholder=" Type Here..."/></div>
       </div>
 
+
+
       <div>
         <div className="GenderText">
         {/* This is the relationship question */}
         <label>Are you...?</label>
         <option value = "">Select <strong>one</strong></option></div>
+
+        {/* <View>
+         <div className ={Gender === "Male" ? "GenderBox2":"GenderBox"}>
+          <button className='GenderButtonStyle' onClick={()=>SetGender("Male")}>
+            Male
+          </button>
+         </div>
+
+        </View> */}
+
         <View>
-        <div className={isGenderBox2 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick}>Unmarried</button></div></View>
+        <div className={isGenderBox2 ? "GenderBox2":"GenderBox"}>
+          <button className = "GenderButtonStyle" onClick = {()=>setisMarried2("Unmarried")}>
+            Unmarried
+          </button>
+          </div>
+          </View>
         <View>
-        <div className={isGenderBox3 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick2}>Married</button></div></View>
-        <div className={isGenderBox4 ?"GenderBox2":"GenderBox"}><button className = "GenderButtonStyle" onClick = {buttonClick3}>In Relationship</button></div>
+        <div className={isGenderBox3 ?"GenderBox2":"GenderBox"}>
+          <button className = "GenderButtonStyle" onClick = {()=>setisMarried3("Married")}>
+            Married
+            </button>
+            </div>
+            </View>
+        <View>
+        <div className={isGenderBox4 ?"GenderBox2":"GenderBox"}>
+          <button className = "GenderButtonStyle" onClick = {()=>setisMarried4("In Relationship")}>
+            In Relationship
+            </button>
+            </div>
+            </View>
       </div>
+
+
+
+
       {/* This is the Race Question */}
 <div className = "First" >
   <div className = "QuestionContainer">
